@@ -1,4 +1,4 @@
-package com.candidjava.springboot.jpa.entity;
+package com.candidjava.springboot.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

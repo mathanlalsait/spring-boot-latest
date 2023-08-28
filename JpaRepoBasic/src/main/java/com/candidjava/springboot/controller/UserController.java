@@ -1,4 +1,4 @@
-package com.candidjava.springboot.jpa.controller;
+package com.candidjava.springboot.controller;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.candidjava.springboot.jpa.entity.User;
-import com.candidjava.springboot.jpa.service.UserService;
+import com.candidjava.springboot.entity.User;
+import com.candidjava.springboot.service.UserService;
 
 
 //Swagger url : http://localhost:8082/swagger-ui.html

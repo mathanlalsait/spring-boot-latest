@@ -1,8 +1,8 @@
-package com.candidjava.springboot.jpa.service;
+package com.candidjava.springboot.service;
 
 import java.util.List;
 
-import com.candidjava.springboot.jpa.entity.User;
+import com.candidjava.springboot.entity.User;
 
 public interface UserService {
 

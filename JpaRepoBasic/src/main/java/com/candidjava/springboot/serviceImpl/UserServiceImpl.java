@@ -1,13 +1,13 @@
-package com.candidjava.springboot.jpa.serviceImpl;
+package com.candidjava.springboot.serviceImpl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.candidjava.springboot.jpa.entity.User;
-import com.candidjava.springboot.jpa.repository.UserRepository;
-import com.candidjava.springboot.jpa.service.UserService;
+import com.candidjava.springboot.entity.User;
+import com.candidjava.springboot.repository.UserRepository;
+import com.candidjava.springboot.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {
