@@ -1,24 +1,29 @@
 package com.candidjava.springboot.serviceImpl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.candidjava.springboot.entity.User;
-import com.candidjava.springboot.repository.UserRepository;
 import com.candidjava.springboot.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {
 
-	@Autowired
-	private UserRepository userRepository;
-
+	List<User> userList=new ArrayList<User>();
+	
+	static
+	{
+		// add 3 users
+	}
+	
 	@Override
 	public User createUser(User user) {
 		// TODO Auto-generated method stub
-        return userRepository.save(user);
+		userList.add(user);
+        return user;
 	}
 
 	@Override
@@ -36,7 +41,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public List<User> getUsers() {
 		// TODO Auto-generated method stub
-		return userRepository.findAll();
+		return userList;
 	}
 
 	@Override
@@ -50,5 +55,4 @@ public class UserServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		userRepository.deleteById(id);
 	}
-
 }
