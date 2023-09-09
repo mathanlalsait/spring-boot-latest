@@ -9,7 +9,13 @@ import jakarta.persistence.Table;
 @Table(name = "users")
 public class User {
 	
-	public User() {
+	public User(Long id, String name, String password, int age, String email, String city) {
+		this.id = id;
+		this.name = name;
+		this.password = password;
+		this.age = age;
+		this.email = email;
+		this.city = city;
 	}
 	@Id
 	@Column

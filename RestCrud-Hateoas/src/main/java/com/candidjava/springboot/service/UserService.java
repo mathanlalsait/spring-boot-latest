@@ -2,6 +2,8 @@ package com.candidjava.springboot.service;
 
 import java.util.List;
 
+import org.springframework.hateoas.Resource;
+
 import com.candidjava.springboot.entity.User;
 
 public interface UserService {
@@ -12,7 +14,7 @@ public interface UserService {
 
 	public List<User> getUsers();
 
-	public User getUserById(Long id);
+	public Resource<User> getUserById(Long id);
 
 	public void deleteUser(Long id);
 }

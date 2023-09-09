@@ -3,11 +3,17 @@ package com.candidjava.springboot.serviceImpl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.Resource;
 import org.springframework.stereotype.Service;
 
+import com.candidjava.springboot.controller.UserController;
 import com.candidjava.springboot.entity.User;
 import com.candidjava.springboot.repository.UserRepository;
 import com.candidjava.springboot.service.UserService;
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
+ 
+
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -40,10 +46,13 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public User getUserById(Long id) {
-		// TODO Auto-generated method stub
-		Resource<User> ee ;
-		return userRepository.findById(id).get();
+	public Resource<User> getUserById(Long id) {
+				User user= userRepository.findById(id).get();
+ 
+        // Creating links as per the hateoas principle.
+        Resource<User> userResource= new Resource<User>(user);
+        userResource.add(linkTo(methodOn(UserController.class).getUserById(id)).withRel("_self"));
+        return userResource;
 	}
 
 	@Override
