@@ -4,9 +4,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.candidjava.springboot</groupId>
-	<artifactId>JpaRepoBasic</artifactId>
+	<artifactId>RestCrud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>JpaRepoBasic</name>
+	<name>RestCrud</name>
 	<url>http://maven.apache.org</url>
 
 	<parent>
