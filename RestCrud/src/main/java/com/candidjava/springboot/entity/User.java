@@ -1,12 +1,5 @@
 package com.candidjava.springboot.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-
-@Entity
-@Table(name = "users")
 public class User {
 	
 	public User(Long id, String name, String password, int age, String email, String city) {
@@ -17,18 +10,11 @@ public class User {
 		this.email = email;
 		this.city = city;
 	}
-	@Id
-	@Column
 	private Long id;
-	@Column
 	private String name;
-	@Column
 	private String password;
-	@Column
 	private int age;
-	@Column
 	private String email;
-	@Column
 	private String city;
 	
 	
