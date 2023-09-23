@@ -1,4 +1,2 @@
-application:
-  host: http://localhost
-  portNumber: 8091
-  name: candid
+server:
+  port:8091
